@@ -1,0 +1,51 @@
+// working table from register page
+
+    <table>
+        <?php
+
+        while ($row = mysqli_fetch_array($results)) {
+            $firstname = $row['FirstName'];
+            $lastname = $row['LastName'];
+            $username = $row['Username'];
+            $password = $row['Password'];
+        ?>
+        <tr>
+            <td><?php echo 'First name: ' . $firstname; ?></td>
+            <td><?php echo 'Last name: ' . $lastname; ?></td>
+            <td><?php echo 'Username: ' . $username; ?></td>
+            <td><?php echo 'Password: ' . $password; ?></td>
+        </tr>
+        <?php } ?>
+    </table>
+
+    // SEARCH table
+
+            echo "<div class='search_table_container'>
+            <table>
+                <tr>
+                    <th>Produc Name</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Image</th>
+                </tr>";
+
+        while ($row = mysqli_fetch_array($results)) {
+            $productname = $row['ProductName'];
+            $description = $row['Description'];
+            $category = $row['Category'];
+            $price = $row['Price'];
+            $image = $row['Image'];
+
+            echo "<tr>";
+            echo "<td>" . $productname . "</td>";
+            echo "<td>" . $description . "</td>";
+            echo "<td>" . $category . "</td>";
+            echo "<td>" . $price . "</td>";
+            echo "<td>" . "<img src=" . $image . ">" . "</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+        echo "</div>";
+
+        
