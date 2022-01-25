@@ -23,7 +23,7 @@
     </div>
 
     <div class="admin_register_container">
-        <form class="admin_register_form" action="adminReg.php" method="POST">
+        <form class="admin_register_form" action="admin_registration_script.php" method="POST">
             <input type="text" placeholder="First Name.." name="FirstName" required>
             <input type="text" placeholder="Last Name.." name="LastName" required>
             <input type="text" placeholder="Username.." name="Username" required>
